@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Cursos</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <h1>📚 Catálogo de Cursos</h1>
+
+      <div class="controls">
+        <div class="search-wrapper">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="search" type="search" placeholder="Buscar curso por título..." aria-label="Buscar cursos" />
+        </div>
+
+        <select id="filtro-categoria">
+          <option value="Todos">Todos</option>
+        </select>
+
+        <button id="toggle-theme" class="icon-btn" title="Alternar tema" aria-label="Alternar tema"><span class="btn-icon">🌙</span></button>
+
+        <button id="ver-inscricoes" class="icon-btn" title="Ver inscrições" aria-label="Ver inscrições"><span class="btn-icon">👥</span><span class="btn-text">Inscrições</span></button>
+      </div>
+    </header>
+
+    <main>
+      <div id="container-cursos"></div>
+    </main>
+
+    <!-- Modal de inscrição -->
+    <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h2 id="modal-title">Inscrever-se</h2>
+        <form id="inscricao-form">
+          <input type="hidden" id="curso-id" />
+          <label class="label">Curso: <strong id="curso-nome"></strong></label>
+          <input type="text" id="nome" placeholder="Seu nome" required />
+          <input type="email" id="email" placeholder="Seu email" required />
+          <div class="modal-actions">
+            <button type="submit" class="btn primary">Enviar inscrição</button>
+            <button type="button" class="btn" id="modal-cancel">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de inscritos -->
+    <div id="modal-inscritos" class="modal hidden" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-inscritos-close">&times;</button>
+        <h2>Inscrições</h2>
+        <div id="lista-inscritos"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

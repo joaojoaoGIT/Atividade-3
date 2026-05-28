@@ -1,0 +1,356 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  min-height:100vh;
+  padding:30px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* TÍTULO */
+
+h1{
+  margin-bottom:20px;
+  color:#60a5fa;
+  font-size:40px;
+}
+
+/* CONTROLS */
+
+.header{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+/* Barra de busca com ícone */
+.search-wrapper{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+}
+
+.search-wrapper .search-icon{
+  position:absolute;
+  left:12px;
+  width:18px;
+  height:18px;
+  color:#93c5fd;
+  opacity:0.95;
+  pointer-events:none;
+}
+
+.search-wrapper input[type="search"]{
+  padding:12px 16px 12px 40px;
+  border-radius:12px;
+  background:#0b1220;
+  color:white;
+  border:1px solid rgba(255,255,255,0.04);
+  min-width:260px;
+  transition:box-shadow .15s ease, transform .12s ease;
+}
+
+.search-wrapper input[type="search"]:focus{
+  box-shadow:0 6px 24px rgba(37,99,235,0.14);
+  transform:translateY(-1px);
+}
+
+.search-wrapper input::placeholder{ color:#94a3b8; }
+
+/* Botões com ícone melhorados */
+.icon-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:linear-gradient(90deg,#2563eb,#60a5fa);
+  color:white;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(37,99,235,0.25);
+  transition:transform .15s ease, box-shadow .15s ease, opacity .12s ease;
+  font-weight:600;
+}
+
+.icon-btn:hover{ transform:translateY(-3px); box-shadow:0 12px 30px rgba(37,99,235,0.3); }
+.icon-btn:active{ transform:translateY(-1px); }
+.icon-btn:focus{ outline:3px solid rgba(96,165,250,0.15); outline-offset:2px; }
+
+.btn-icon{ font-size:18px; line-height:1; display:inline-block; }
+
+.btn-text{ font-size:15px; }
+
+.light-theme .search-wrapper .search-icon{ color:#1e3a8a; }
+.light-theme .icon-btn{ background:linear-gradient(90deg,#1e40af,#60a5fa); box-shadow:0 6px 18px rgba(30,58,138,0.12); }
+
+/* SELECT */
+
+select{
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  margin-bottom:0;
+  background:#1e293b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+select:hover{
+  background:#334155;
+}
+
+/* BOTÕES */
+
+.btn{
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  background:rgba(255,255,255,0.04);
+  color:inherit;
+}
+
+.btn.primary{
+  background:#2563eb;
+  color:white;
+}
+
+/* CONTAINER DOS CARDS */
+
+#container-cursos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+
+.card{
+  background:#1e293b;
+  border-radius:20px;
+  padding:20px;
+  transition:0.3s;
+  position:relative;
+  border:1px solid rgba(96,165,250,0.06);
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 30px rgba(2,6,23,0.6);
+}
+
+/* TÍTULO DO CURSO */
+
+.card h2{
+  color:#60a5fa;
+  margin-bottom:6px;
+}
+
+.card-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+/* CATEGORIA */
+
+.categoria{
+  background:#2563eb;
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  margin-bottom:8px;
+  font-size:14px;
+}
+
+/* INSTRUTOR */
+
+.instrutor{
+  margin-bottom:15px;
+  color:#cbd5e1;
+  line-height:1.5;
+}
+
+/* LISTA */
+
+ul{
+  margin-top:10px;
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:8px;
+  color:#e2e8f0;
+}
+
+/* RODAPÉ DO CARD */
+
+.card-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:14px;
+  gap:10px;
+}
+
+.inscritos-count{
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* CURSO ESGOTADO */
+
+.esgotado{
+  opacity:0.6;
+}
+
+/* TAG */
+
+.tag{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:#ef4444;
+  color:white;
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+/* MODAL */
+
+.modal.hidden{ display:none; }
+
+.modal{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(2,6,23,0.6);
+  z-index:60;
+}
+
+.modal-content{
+  width:100%;
+  max-width:520px;
+  background:#0b1220;
+  padding:20px;
+  border-radius:12px;
+  color:inherit;
+  box-shadow:0 10px 40px rgba(2,6,23,0.6);
+}
+
+.modal-close{
+  background:transparent;
+  border:none;
+  font-size:26px;
+  float:right;
+  cursor:pointer;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"]{
+  width:100%;
+  padding:12px 14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:#071028;
+  color:inherit;
+}
+
+.modal-actions{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  margin-top:8px;
+}
+
+/* INSCRITOS */
+
+.inscrito-item{
+  padding:10px 8px;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+
+.curso-ref{
+  color:#93c5fd;
+  font-size:13px;
+}
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#2563eb;
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  box-shadow:0 6px 24px rgba(37,99,235,0.2);
+  z-index:80;
+  opacity:0;
+  transform:translateY(12px);
+  transition:all 0.25s ease;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:700px){
+
+  body{
+    padding:20px;
+  }
+
+  h1{
+    font-size:30px;
+  }
+
+  .header{ align-items:flex-start; }
+
+}
+
+/* TEMA CLARO */
+.light-theme{
+  background:#f8fafc;
+  color:#0f172a;
+}
+
+.light-theme h1{ color:#1e3a8a; }
+
+.light-theme .card{ background:white; border:1px solid rgba(2,6,23,0.06); color:#0f172a; }
+
+.light-theme .categoria{ background:#1e40af; color:white; }
+
+.light-theme input[type="search"], .light-theme .modal-content input{ background:#fff; color:#0f172a; border:1px solid rgba(2,6,23,0.06); }
+
+.light-theme .modal-content{ background:white; color:#0f172a; }
+
+.light-theme .tag{ background:#ef4444; }
+
+.light-theme select{ background:#eef2ff; color:#0f172a; }
