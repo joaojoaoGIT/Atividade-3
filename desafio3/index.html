@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JoãoStore</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-ps2"></div>
+
+  <header>
+
+    <div class="logo">
+      <h1>JoãoStore</h1>
+      <p>Especialista em PS2</p>
+    </div>
+
+    <div class="cart-btn">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="banner">
+      <h2>A melhor loja especializada em PS2</h2>
+      <p>Seja maluco e compre jogo de PS2 original!</p>
+    </section>
+
+    <section class="products-container" id="products-container">
+    </section>
+
+  </main>
+
+  <div class="cart-modal" id="cart-modal">
+
+    <div class="cart-content">
+
+      <div class="cart-header">
+        <h2>Carrinho</h2>
+        <button id="close-cart">✖</button>
+      </div>
+
+      <div id="cart-items"></div>
+
+      <h3 id="cart-total">Total: R$ 0</h3>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
