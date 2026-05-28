@@ -1,0 +1,165 @@
+[
+  {
+    "id": 1,
+    "titulo": "Desenvolvimento Web Full Stack",
+    "categoria": "Programação",
+    "vagasEsgotadas": false,
+
+    "instrutor": {
+      "nome": "Ana Silva",
+      "experiencia": "Senior Dev"
+    },
+
+    "modulos": [
+      "HTML & CSS",
+      "JavaScript Avançado",
+      "Bancos de Dados"
+    ]
+  },
+
+  {
+    "id": 2,
+    "titulo": "UX/UI Design para Iniciantes",
+    "categoria": "Design",
+    "vagasEsgotadas": true,
+
+    "instrutor": {
+      "nome": "Carlos Souza",
+      "experiencia": "Lead Designer"
+    },
+
+    "modulos": [
+      "Fundamentos do Design",
+      "Prototipagem no Figma",
+      "Testes de Usabilidade"
+    ]
+  },
+
+  {
+    "id": 3,
+    "titulo": "Banco de Dados e SQL moderno",
+    "categoria": "Programação",
+    "vagasEsgotadas": false,
+
+    "instrutor": {
+      "nome": "Ana Silva",
+      "experiencia": "Senior Dev"
+    },
+
+    "modulos": [
+      "Modelagem Relacional",
+      "Queries Avançadas",
+      "Performance"
+    ]
+  },
+
+  {
+    "id": 4,
+    "titulo": "Marketing Digital e Growth Hacking",
+    "categoria": "Negócios",
+    "vagasEsgotadas": false,
+
+    "instrutor": {
+      "nome": "Mariana Costa",
+      "experiencia": "Growth Manager"
+    },
+
+    "modulos": [
+      "SEO Avançado",
+      "Tráfego Pago",
+      "Análise de Métricas"
+    ]
+  }
+,
+  {
+    "id": 5,
+    "titulo": "Python para Data Science",
+    "categoria": "Dados",
+    "vagasEsgotadas": false,
+    "instrutor": {
+      "nome": "Luiz Pereira",
+      "experiencia": "Data Scientist"
+    },
+    "modulos": [
+      "Python Básico",
+      "Pandas e NumPy",
+      "Visualização de Dados",
+      "Machine Learning Intro"
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "DevOps e CI/CD",
+    "categoria": "Infraestrutura",
+    "vagasEsgotadas": false,
+    "instrutor": {
+      "nome": "Rafaela Souza",
+      "experiencia": "Engenheira de DevOps"
+    },
+    "modulos": [
+      "Linux & Shell",
+      "Docker e Kubernetes",
+      "CI/CD com GitHub Actions"
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Introdução à IA com Python",
+    "categoria": "IA",
+    "vagasEsgotadas": false,
+    "instrutor": {
+      "nome": "Bruno Almeida",
+      "experiencia": "Pesquisador de IA"
+    },
+    "modulos": [
+      "Fundamentos de IA",
+      "Redes Neurais Básicas",
+      "Projetos Práticos"
+    ]
+  },
+  {
+    "id": 8,
+    "titulo": "Excel Avançado para Negócios",
+    "categoria": "Negócios",
+    "vagasEsgotadas": true,
+    "instrutor": {
+      "nome": "Clara Mendes",
+      "experiencia": "Analista Financeira"
+    },
+    "modulos": [
+      "Tabelas Dinâmicas",
+      "Power Query",
+      "Dashboards"
+    ]
+  },
+  {
+    "id": 9,
+    "titulo": "Mobile Apps com React Native",
+    "categoria": "Programação",
+    "vagasEsgotadas": false,
+    "instrutor": {
+      "nome": "Thiago Ramos",
+      "experiencia": "Mobile Developer"
+    },
+    "modulos": [
+      "Fundamentos do React",
+      "Layouts Mobile",
+      "Integração com APIs"
+    ]
+  },
+  {
+    "id": 10,
+    "titulo": "Fotografia Digital",
+    "categoria": "Design",
+    "vagasEsgotadas": false,
+    "instrutor": {
+      "nome": "Mariana Lima",
+      "experiencia": "Fotógrafa Profissional"
+    },
+    "modulos": [
+      "Princípios da Fotografia",
+      "Edição com Lightroom",
+      "Portfólio"
+    ]
+  }
+]
